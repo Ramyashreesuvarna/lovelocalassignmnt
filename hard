@@ -1,0 +1,11 @@
+def shortestPalindrome(s):
+    rev_s = s[::-1]
+    n = len(s)
+
+    for i in range(n, 0, -1):
+        if s[:i] == rev_s[n - i:]:
+            return rev_s[:n - i] + s
+
+s = input("enter string :")
+result = shortestPalindrome(s)
+print(result)
